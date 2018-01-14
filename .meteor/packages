@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-autopublish@1.0.7
 less@2.7.11
 iron:router
 fortawesome:fontawesome
@@ -36,3 +35,9 @@ fourseven:scss
 tsega:bootstrap3-datetimepicker
 jquery@1.11.10
 dynamic-import@0.2.0
+practicalmeteor:mocha
+xolvio:cleaner
+dburles:factory
+aldeed:collection2-core@2.0.0
+aldeed:autoform
+aldeed:schema-deny

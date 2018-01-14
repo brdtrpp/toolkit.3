@@ -10,6 +10,8 @@ import './common/sidebar.js';
 import './common/topnavbar.horizontal.html';
 import './common/topnavbar.html';
 import './common/topnavbar.js';
+// modal
+import './common/modals.html'
 // blog
 import './views/blog/blog-article-view.html';
 import './views/blog/blog-article-view.js';
@@ -40,6 +42,11 @@ import './views/dashboard/dashboardv2.html';
 import './views/dashboard/dashboardv2.js';
 import './views/dashboard/dashboardv3.html';
 import './views/dashboard/dashboardv3.js';
+// processes
+import './views/processes/processes.html';
+import './views/processes/processes.js';
+import './views/processes/processItem.html';
+import './views/processes/processItem.js';
 // documentation
 import './views/documentation/documentation.html';
 import './views/documentation/documentation.js';

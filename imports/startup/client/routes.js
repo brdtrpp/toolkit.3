@@ -1,13 +1,15 @@
 Router.configure({
     loadingTemplate: 'loading',
-    layoutTemplate: 'layout'
+    layoutTemplate: 'layout',
+    waitOn: function () {
+      return Meteor.subscribe('processes');
+    },
 });
 
 // Default route
 Router.route('/', function() {
     Router.go('dashboardv1');
 });
-
 
 // Dashboard
 Router.map(function() {
@@ -320,6 +322,10 @@ Router.map(function() {
 // Documentation
 Router.route('documentation', function() {
     this.render('documentation');
+});
+
+Router.route('/processes', {
+    name: 'processes'
 });
 
 // Router transitions
