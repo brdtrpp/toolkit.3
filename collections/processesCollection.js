@@ -28,6 +28,18 @@ const ProcessSchema = new SimpleSchema({
     max: 75
   },
 
+  subtitle: {
+    type: String,
+    label: "What is a good subtitle for this process?",
+    max: 150
+  },
+
+  description: {
+    type: String,
+    label: "What is a good description for this process?",
+    max: 5000
+  }
+
   // "app.$._id": {
   //   type: String,
   //   autoform: {
@@ -43,7 +55,7 @@ const ProcessSchema = new SimpleSchema({
   // "app.$.name": {
   //   type: String,
   // },
-  // 
+  //
   // timeperiod: {
   //   type: Object,
   //   label: "What is the time period under review?",

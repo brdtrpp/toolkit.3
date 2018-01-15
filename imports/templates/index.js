@@ -10,6 +10,7 @@ import './common/sidebar.js';
 import './common/topnavbar.horizontal.html';
 import './common/topnavbar.html';
 import './common/topnavbar.js';
+import './common/loading.html';
 // modal
 import './common/modals.html'
 // blog

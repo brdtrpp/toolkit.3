@@ -324,8 +324,17 @@ Router.route('documentation', function() {
     this.render('documentation');
 });
 
-Router.route('/processes', {
-    name: 'processes'
+// Custom router
+Router.route('/processes', function() {
+    this.render('processes')
+});
+
+Router.route('/processes/:_id', function () {
+  this.render('processItem', {
+    data: function () {
+      return Processes.findOne({_id: this.params._id});
+    }
+  });
 });
 
 // Router transitions
