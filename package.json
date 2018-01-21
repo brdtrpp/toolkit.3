@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "c9": "meteor run --port $IP:$PORT",
     "install": "napa",
     "postinstall": "modernizr -c modernizr-config.json -d public/modernizr.js"
   },

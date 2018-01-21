@@ -6,26 +6,51 @@
     <div class="row">
       {{#each processes}}
         <div class="col-lg-4 col-md-6">
-      <div class="panel b">
-         <div class="panel-heading">
-            <h4 class="m0">{{name}}</h4>
-            <small class="text-muted">{{subtitle}}</small>
+            <div class="panel b">
+               <div class="panel-heading">
+                  <h4 class="m0">{{name}}</h4>
+                  <small class="text-muted">{{subtitle}}</small>
+               </div>
+               <table class="table">
+                  <tbody>
+                     <tr>
+                        <td>
+                           <strong>Start date</strong>
+                        </td>
+                        <td>01/01/2016</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div class="panel-footer text-center">
+                  <a type="button" class="btn btn-default" href="/processes/{{_id}}">Manage Process</a>
+               </div>
+            </div>
          </div>
-         <table class="table">
-            <tbody>
-               <tr>
-                  <td>
-                     <strong>Start date</strong>
-                  </td>
-                  <td>01/01/2016</td>
-               </tr>
-            </tbody>
-         </table>
-         <div class="panel-footer text-center">
-            <a type="button" class="btn btn-default" href="/processes/{{_id}}">Manage Process</a>
-         </div>
-      </div>
-      </div>
       {{/each}}
     </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </template>

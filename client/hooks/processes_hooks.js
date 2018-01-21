@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { EJSON } from 'meteor/ejson'
+import { EJSON } from 'meteor/ejson';
 
 AutoForm.hooks({
   insertProcessForm: {
@@ -9,12 +9,12 @@ AutoForm.hooks({
       return doc;
      }
    },
-},
-   onSuccess: function(insert, result) {
-    //  Bert.alert('Process Successfully Created', 'success');
-     $('#createProcess').modal('hide');
-     AutoForm.resetForm(insertProcessForm);
-   },
+    onSuccess: function(insert, result) {
+     //  Bert.alert('Process Successfully Created', 'success');
+     console.log("toaster");
+      $('#createProcess').modal('hide');
+      AutoForm.resetForm(insertProcessForm);
+    },
  //   onError: function(insert, result){
  //     console.log(result);
  //     Bert.alert("Somethig went wrong, please check the form again", 'danger');
@@ -31,7 +31,7 @@ AutoForm.hooks({
  //   onError: function(insert, result){
  //     Bert.alert("Somethig went wrong, please check the form again", 'danger');
  //   },
- //   beginSubmit: function() {},
- //   endSubmit: function() {}
- // }
+    beginSubmit: function() {},
+    endSubmit: function() {}
+  }
 });
