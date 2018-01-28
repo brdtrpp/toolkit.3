@@ -11,6 +11,7 @@
     },
     "nav": {
       "DASHBOARD": "Dashboard",
+      "PROCESSES": "Processes",
       "WIDGETS": "Widgets",
       "DOCUMENTATION": "Documentation",
       "element": {

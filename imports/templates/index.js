@@ -12,7 +12,7 @@ import './common/topnavbar.html';
 import './common/topnavbar.js';
 import './common/loading.html';
 // modal
-import './common/modals.html'
+import './common/modals.html';
 // blog
 import './views/blog/blog-article-view.html';
 import './views/blog/blog-article-view.js';

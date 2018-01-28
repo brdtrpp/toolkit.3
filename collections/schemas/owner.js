@@ -2,12 +2,12 @@ import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
 OwnerSchema = new SimpleSchema({
-  ownerId: {
-    type: String,
-    autoValue: function() {
-      return this.userId;
-    },
-  },
+  // ownerId: {
+  //   type: String,
+  //   autoValue: function() {
+  //     return this.userId;
+  //   },
+  // },
 
   // Force value to be current date (on server) upon insert
   // and prevent updates thereafter.

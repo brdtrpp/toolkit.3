@@ -5,6 +5,7 @@ AutoForm.hooks({
   insertProcessForm: {
     before: {
      insert: function(doc) {
+      console.log(doc);
       //  doc.timeperiod.time = moment.duration(doc.timeperiod.duration, doc.timeperiod.type).asMilliseconds();
       return doc;
      }

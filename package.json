@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "c9": "meteor run --port $IP:$PORT",
+    "c9": "meteor run --port $IP:$PORT --settings development.json",
     "install": "napa",
     "postinstall": "modernizr -c modernizr-config.json -d public/modernizr.js"
   },
@@ -16,6 +16,7 @@
     "jqueryui-touch-punch": "furf/jquery-ui-touch-punch"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.38",
     "animate.css": "3.5.2",
     "animo": "github:thrivingkings/animo.js",
     "babel-runtime": "^6.26.0",

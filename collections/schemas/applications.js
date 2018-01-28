@@ -1,9 +1,17 @@
 import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
+import './scenarios.js';
 
-Apps = new SimpleSchema({
-  name: {
-    type: String,
-    label: "Name of application?"
-  }
+AppSchema = new SimpleSchema({
+    name: {
+        type: String,
+    },
+
+    scenarios: {
+        type: Array,
+    },
+
+    'scenarios.$': {
+        type: ScenariosSchema
+    }
 });
