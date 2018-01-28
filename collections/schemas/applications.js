@@ -3,15 +3,15 @@ SimpleSchema.extendOptions(['autoform']);
 import './scenarios.js';
 
 AppSchema = new SimpleSchema({
-    name: {
-        type: String,
-    },
+  name: {
+    type: String,
+  },
 
-    scenarios: {
-        type: Array,
-    },
+  scenarios: {
+    type: Array,
+  },
 
-    'scenarios.$': {
-        type: ScenariosSchema
-    }
+  'scenarios.$': {
+    type: ScenariosSchema
+  }
 });

@@ -41,7 +41,7 @@
                 </button>
              </div>
           </div>
-          <div class="row-masonry row-masonry-xl-6 row-masonry-lg-4 row-masonry-md-3 row-masonry-sm-2">
+          <div class="row-masonry row-masonry-xl-3 row-masonry-lg-2 row-masonry-md-2 row-masonry-sm-1">
        <!--<div class="col-masonry">-->
        <!--   <div class="panel b">-->
        <!--      <div class="panel-heading">-->
@@ -61,16 +61,19 @@
        <!--      </div>-->
        <!--  </div>-->
        <!--</div>-->
-       {{scenarios}}
-        <div class="col-masonry">
-            <div id="panelDemo8" class="panel panel-primary">
-                <div class="panel-heading">Primary Panel</div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                    </div>
+          {{#each scenarios}}
+            <div class="col-masonry m0">
+              <div id="{{name}}Panel" class="panel panel-primary">
+                <div class="panel-heading">{{name}} - <small>{{state}}</small></div>
+                  <div class="panel-body">
+                  <p>{{description}}</p>
+                </div>
                 <div class="panel-footer">Panel Footer</div>
+              </div>
             </div>
-        </div>
+
+          {{/each}}
+
        <!--<div class="col-masonry">-->
        <!--   <div class="box-placeholder m0">-->
        <!--      <p class="text-center text-muted">-->

@@ -13,11 +13,11 @@ ScenariosSchema = new SimpleSchema({
 
   state: {
     type: String,
-     autoform: {
-        options: {
-            current: "Current Scenario",
-            future: "Future Scenario",
-        }
+    autoform: {
+      options: {
+        current: "Current Scenario",
+        future: "Future Scenario",
+      }
     }
     // allowedValues: ["current", "future"],
   },
@@ -27,7 +27,7 @@ ScenariosSchema = new SimpleSchema({
     autoform: {
       omit: true,
     },
-    autoValue: function(){
+    autoValue: function () {
       return 14;
     }
   }

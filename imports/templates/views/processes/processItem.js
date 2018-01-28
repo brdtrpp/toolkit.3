@@ -1,26 +1,30 @@
 Template.processItem.helpers({
-  appsCount: function(){
+  appsCount: function () {
     return this.applications.length;
   },
 
-  scenarios: function(){
-    // const app = this.applications;
-    // _.forEach()
-    // console.log(app)
+  scenarios: function () {
+    const app = Session.get('app');
+    const ars = this.applications;
+    var found = _.find(ars, function (ar) {
+      return ar.name == app;
+    });
+    return found.scenarios;
   },
 
-  active: function(){
+  active: function () {
     const app = Session.get('app');
-    if (this.name !== app){
+    if (this.name !== app) {
       return "";
-    } else {
+    }
+    else {
       return "active";
     }
   }
 });
 
 Template.processItem.events({
-  'click .app': function(){
+  'click .app': function () {
     Session.set('app', this.name);
   }
 });
