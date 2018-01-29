@@ -9,9 +9,11 @@ AppSchema = new SimpleSchema({
 
   scenarios: {
     type: Array,
+    optional: true
   },
 
   'scenarios.$': {
-    type: ScenariosSchema
+    type: ScenariosSchema,
+    optional: true
   }
 });

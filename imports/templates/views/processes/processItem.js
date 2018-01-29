@@ -9,7 +9,9 @@ Template.processItem.helpers({
     var found = _.find(ars, function (ar) {
       return ar.name == app;
     });
-    return found.scenarios;
+    if (found !== undefined) {
+      return found.scenarios;
+    }
   },
 
   active: function () {
@@ -27,4 +29,8 @@ Template.processItem.events({
   'click .app': function () {
     Session.set('app', this.name);
   }
+});
+
+Template.processItem.onRendered(function () {
+  Session.set('pro', this.data._id);
 });

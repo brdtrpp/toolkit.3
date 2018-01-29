@@ -1,4 +1,6 @@
 <template name="modals">
+  <h3>HELP!</h3>
+  {{test}}
   <!-- Modal -->
   <div class="modal fade" id="createProcess" tabindex="-1" role="dialog" aria-labelledby="createProcess">
     <div class="modal-dialog" role="document">
@@ -14,6 +16,27 @@
               <div class='col-md-6'>{{> afQuickField name='timeperiod.duration'}}</div>
               <div class='col-md-6'>{{> afQuickField name='timeperiod.type'}}</div>
               {{> afQuickField name='description' rows=8}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Create Process</button>
+            </div>
+          {{/autoForm}}
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="addApp" tabindex="-1" role="dialog" aria-labelledby="addApp">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="addApp">Add Application</h4>
+        </div>
+          {{#autoForm collection="Processes" doc=pro id="addApp" type="update"}}
+            <div class="modal-body">
+              {{ > afQuickField name="applications.0.name" }}
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

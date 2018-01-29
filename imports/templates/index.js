@@ -13,6 +13,7 @@ import './common/topnavbar.js';
 import './common/loading.html';
 // modal
 import './common/modals.html';
+import './common/modals.js';
 // blog
 import './views/blog/blog-article-view.html';
 import './views/blog/blog-article-view.js';
