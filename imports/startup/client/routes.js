@@ -326,7 +326,7 @@ Router.route('documentation', function () {
 
 // Processes
 Router.route('/processes', function () {
-  this.render('processes')
+  this.render('processes');
 });
 
 Router.route('/processes/:_id', function () {

@@ -4,7 +4,7 @@ Processes = new Mongo.Collection("processes");
 import { Random } from 'meteor/random'
 
 if (Meteor.isServer) {
- Meteor.publish('processes', function() {
+  Meteor.publish('processes', function () {
     return Processes.find();
   });
 }
@@ -68,9 +68,47 @@ const ProcessSchema = new SimpleSchema({
     type: Array,
     optional: true,
   },
-  'applications.$': {
+
+  "applications.$": {
     type: AppSchema
   },
+  // "applications.$.name": {
+  //   type: String,
+  // },
+  // "applications.$.scenarios": {
+  //   type: Array,
+  //   optional: true
+  // },
+  // "applications.$.scenarios.$": {
+  //   type: Object,
+  //   optional: true
+  // },
+  // "applications.$.scenarios.$.name": {
+  //   type: String,
+  // },
+  // "applications.$.scenarios.$.description": {
+  //   type: String,
+
+  // },
+  // "applications.$.scenarios.$.state": {
+  //   type: String,
+  //   autoform: {
+  //     options: {
+  //       current: "Current Scenario",
+  //       future: "Future Scenario",
+  //     }
+  //   }
+  //   // allowedValues: ["current", "future"],
+  // },
+  // "applications.$.scenarios.$.rollup": {
+  //   type: Number,
+  //   autoform: {
+  //     omit: true,
+  //   },
+  //   autoValue: function () {
+  //     return 14;
+  //   }
+  // }
 
 });
 
