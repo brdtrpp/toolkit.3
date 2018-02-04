@@ -70,11 +70,12 @@ const ProcessSchema = new SimpleSchema({
   },
 
   "applications.$": {
-    type: AppSchema
+    // type: AppSchema
+    type: Object
   },
-  // "applications.$.name": {
-  //   type: String,
-  // },
+  "applications.$.name": {
+    type: String,
+  },
   // "applications.$.scenarios": {
   //   type: Array,
   //   optional: true

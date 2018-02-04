@@ -34,12 +34,29 @@ AutoForm.hooks({
     endSubmit: function () {}
   },
 
-  addApp: {
+  addAppForm: {
     before: {
-      update: function (doc) {
+      "update-pushArray": function (doc) {
         console.log(doc);
+        return doc;
       }
     },
+    onSuccess: function (update, result) {
+      //  Bert.alert('Process Successfully Created', 'success');
+      $('#addApp').modal('hide');
+      AutoForm.resetForm(insertProcessForm);
+    },
+    // onSubmit: function (doc) {
+    //   console.log(doc);
+    //   // if (customHandler(insertDoc)) {
+    //   //   console.log(updateDoc);
+    //   // }
+    //   // else {
+    //   //   console.log("fail");
+    //   // }
+    //   // return false;
+    //   this.done();
+    // },
     beginSubmit: function () {},
     endSubmit: function () {}
   }

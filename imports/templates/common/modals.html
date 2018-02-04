@@ -35,7 +35,8 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="addApp">Add Application</h4>
           </div>
-          {{#autoForm collection="Processes" id="insertProcessForm" type="update-pushArray" doc=pro scope="applications.3.name" schema=AppSchema}}
+          <!--{{> quickForm collection="Processes" doc=pro id="addAppForm" type="update"}}-->
+          {{#autoForm collection="Processes" id="addAppForm" type="update-pushArray" doc=pro scope="applications"}}
           <div class="modal-body">
             {{> afQuickField name='name'}}
           </div>
