@@ -14,27 +14,26 @@ AutoForm.hooks({
       $('#createProcess').modal('hide');
       AutoForm.resetForm(insertProcessForm);
     },
-    //   onError: function(insert, result){
-    //     console.log(result);
-    //     Bert.alert("Somethig went wrong, please check the form again", 'danger');
-    //   },
-    //   beginSubmit: function() {},
-    //   endSubmit: function() {}
-    // },
-
-    // applicationForm:{
-    //   onSuccess: function(insert, result) {
-    //     Bert.alert('Application Successfully Added', 'success');
-    //     $('#appModal').modal('hide');
-    //   },
-    //   onError: function(insert, result){
-    //     Bert.alert("Somethig went wrong, please check the form again", 'danger');
-    //   },
     beginSubmit: function () {},
     endSubmit: function () {}
   },
 
   addAppForm: {
+    before: {
+      "update-pushArray": function (doc) {
+        return doc;
+      }
+    },
+    onSuccess: function (update, result) {
+      //  Bert.alert('Process Successfully Created', 'success');
+      $('#addApp').modal('hide');
+      AutoForm.resetForm(addAppForm);
+    },
+    beginSubmit: function () {},
+    endSubmit: function () {}
+  },
+
+  addScenarioForm: {
     before: {
       "update-pushArray": function (doc) {
         console.log(doc);
@@ -43,21 +42,10 @@ AutoForm.hooks({
     },
     onSuccess: function (update, result) {
       //  Bert.alert('Process Successfully Created', 'success');
-      $('#addApp').modal('hide');
-      AutoForm.resetForm(insertProcessForm);
+      $('#addScenario').modal('hide');
+      AutoForm.resetForm(addScenarioForm);
     },
-    // onSubmit: function (doc) {
-    //   console.log(doc);
-    //   // if (customHandler(insertDoc)) {
-    //   //   console.log(updateDoc);
-    //   // }
-    //   // else {
-    //   //   console.log("fail");
-    //   // }
-    //   // return false;
-    //   this.done();
-    // },
     beginSubmit: function () {},
     endSubmit: function () {}
-  }
+  },
 });

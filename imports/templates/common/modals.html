@@ -1,6 +1,4 @@
 <template name="modals">
-  <h3>HELP!</h3>
-  {{test}}
   <!-- Modal -->
   <div class="modal fade" id="createProcess" tabindex="-1" role="dialog" aria-labelledby="createProcess">
     <div class="modal-dialog" role="document">
@@ -27,7 +25,7 @@
   </div>
 
   {{#if inPro}}
-    <!-- Modal -->
+    <!-- Application Modal -->
     <div class="modal fade" id="addApp" tabindex="-1" role="dialog" aria-labelledby="addApp">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -35,10 +33,9 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="addApp">Add Application</h4>
           </div>
-          <!--{{> quickForm collection="Processes" doc=pro id="addAppForm" type="update"}}-->
           {{#autoForm collection="Processes" id="addAppForm" type="update-pushArray" doc=pro scope="applications"}}
           <div class="modal-body">
-            {{> afQuickField name='name'}}
+            {{> afQuickField name='name' placeholder="New Scenario"}}
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -47,6 +44,29 @@
           {{/autoForm}}
         </div>
       </div>
-  </div>
+    </div>
+
+    <!-- Scenario Modal -->
+    <div class="modal fade" id="addScenario" tabindex="-1" role="dialog" aria-labelledby="addScenario">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="addScenario">
+              Add Scenario</h4>
+          </div>
+          {{#autoForm collection="Processes" id="addScenarioForm" type="update-pushArray" doc=pro scope=appName}}
+          <div class="modal-body">
+            {{> afQuickField name='name'}}
+            {{> afQuickField name="description"}}
+            {{> afQuickField name="state"}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add Application</button>
+          </div>
+          {{/autoForm}}
+        </div>
+      </div>
+    </div>
   {{/if}}
 </template>

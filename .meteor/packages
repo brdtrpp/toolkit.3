@@ -43,3 +43,4 @@ aldeed:autoform
 aldeed:schema-deny
 accounts-ui@1.3.0
 underscore
+aldeed:schema-index

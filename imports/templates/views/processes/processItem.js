@@ -33,4 +33,5 @@ Template.processItem.events({
 
 Template.processItem.onRendered(function () {
   Session.set('pro', this.data._id);
+  Session.setDefault('app', this.data.applications[0].name);
 });

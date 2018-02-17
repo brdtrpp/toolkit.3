@@ -18,8 +18,8 @@
              <div class="panel-body">
                 <div data-toggle="buttons" class="btn-group">
                     {{#each applications}}
-                        <label class="btn btn-info {{active}} app">
-                        <input id="{{name}}" type="radio" name="options" checked="">{{name}}</label>
+                      <label class="btn btn-info {{active}} app">
+                      <input id="{{name}}" type="radio" name="options" checked="">{{name}}</label>
                     {{/each}}
                 </div>
                 <button type="button" class="btn btn-labeled btn-warning pull-right" data-toggle="modal" data-target="#addApp">
@@ -28,17 +28,13 @@
                 </button>
              </div>
           </div>
+          <button type="button" class="btn btn-labeled btn-info pull-right" data-toggle="modal" data-target="#addScenario">
+            <span class="btn-label"><i class="fa fa-plus"></i>
+            </span>Add Scenario
+          </button>
           <div class="row-masonry row-masonry-xl-3 row-masonry-lg-2 row-masonry-md-2 row-masonry-sm-1">
             {{#each scenarios}}
-              <div class="col-masonry m0">
-                <div id="{{name}}Panel" class="panel panel-primary">
-                  <div class="panel-heading">{{name}} - <small>{{state}}</small></div>
-                    <div class="panel-body">
-                    <p>{{description}}</p>
-                  </div>
-                  <div class="panel-footer">Panel Footer</div>
-                </div>
-              </div>
+              {{> scenarioItem}}
             {{/each}}
           </div>
         </div>

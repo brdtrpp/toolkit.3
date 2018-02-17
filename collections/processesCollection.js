@@ -75,41 +75,42 @@ const ProcessSchema = new SimpleSchema({
   },
   "applications.$.name": {
     type: String,
+    // unique: true,
   },
-  // "applications.$.scenarios": {
-  //   type: Array,
-  //   optional: true
-  // },
-  // "applications.$.scenarios.$": {
-  //   type: Object,
-  //   optional: true
-  // },
-  // "applications.$.scenarios.$.name": {
-  //   type: String,
-  // },
-  // "applications.$.scenarios.$.description": {
-  //   type: String,
+  "applications.$.scenarios": {
+    type: Array,
+    optional: true
+  },
+  "applications.$.scenarios.$": {
+    type: Object,
+    // optional: true
+  },
+  "applications.$.scenarios.$.name": {
+    type: String,
+  },
+  "applications.$.scenarios.$.description": {
+    type: String,
 
-  // },
-  // "applications.$.scenarios.$.state": {
-  //   type: String,
-  //   autoform: {
-  //     options: {
-  //       current: "Current Scenario",
-  //       future: "Future Scenario",
-  //     }
-  //   }
-  //   // allowedValues: ["current", "future"],
-  // },
-  // "applications.$.scenarios.$.rollup": {
-  //   type: Number,
-  //   autoform: {
-  //     omit: true,
-  //   },
-  //   autoValue: function () {
-  //     return 14;
-  //   }
-  // }
+  },
+  "applications.$.scenarios.$.state": {
+    type: String,
+    autoform: {
+      options: {
+        current: "Current Scenario",
+        future: "Future Scenario",
+      }
+    }
+    // allowedValues: ["current", "future"],
+  },
+  "applications.$.scenarios.$.rollup": {
+    type: Number,
+    autoform: {
+      omit: true,
+    },
+    autoValue: function () {
+      return 14;
+    }
+  }
 
 });
 

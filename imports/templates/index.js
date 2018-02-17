@@ -44,6 +44,9 @@ import './views/dashboard/dashboardv2.html';
 import './views/dashboard/dashboardv2.js';
 import './views/dashboard/dashboardv3.html';
 import './views/dashboard/dashboardv3.js';
+// scenarios
+import './views/scenarios/scenarios.html';
+import './views/scenarios/scenarios.js';
 // processes
 import './views/processes/processes.html';
 import './views/processes/processes.js';
